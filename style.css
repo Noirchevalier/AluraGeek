@@ -233,7 +233,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 21px;
-    margin: 0 21px 0 21px;
+    margin: 0 21px 0 24px;
     align-items: center;
 }
 
