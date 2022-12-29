@@ -210,7 +210,7 @@ body {
     gap: 12em;
     align-items: center;
     text-align: center;
-    margin: 16px 0 16px 16px;
+    margin: 16px 0 16px 24px;
 }
 
 .titulo__lista {
@@ -233,7 +233,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 21px;
-    margin: 0 21px 0 24px;
+    margin: 0 21px 0 30px;
     align-items: center;
 }
 
