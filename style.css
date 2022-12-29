@@ -1,6 +1,7 @@
 :root {
     --branco-principal: #FFFFFF;
     --cinza-principal: #464646;
+    --cinza-secundario: #F5F5F5;
     --azul-principal: #2A7AE4;
     --cor-footer: #EAF2FD;
     --fonte-princpal: 'raleway';
@@ -26,6 +27,10 @@ body {
     margin: 22px 16px;
 }
 
+.container__logo2 {
+    display: none;
+}
+
 .botao__login {
     color: var(--azul-principal);
     font-weight: 600;
@@ -40,11 +45,27 @@ body {
     width: 140px;
 }
 
+.botao__login--desktop {
+    display: none;
+}
+
 .botao__pesquisa {
     margin: 7px 0 0 50px;
     padding: 0;
     border: none;
     background: none;
+}
+
+.Pesquisa__desktop {
+    display: none ;
+}
+
+.barra__pesquisa--desktop {
+    display: none;
+}
+
+.botao__pesquisa--desktop {
+    display: none;
 }
 
 .banner {
@@ -59,10 +80,93 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+    .principal {
+        margin: 0 123px 0 110px;
+        height: 115px;
+        align-items: center;
+        grid-template-columns: 20% 60% 20%;
+    }
+
+    .container__logo {
+        display: none;
+    }
+
+    .container__logo2 {
+        display: block;
+    }
+
+    .botao__login {
+        display: none;
+    }
+
+    .botao__login--desktop {
+        display: block;
+        color: var(--azul-principal);
+        font-weight: 600;
+        align-items: center;
+        text-align: center;
+        padding-top: 16px;
+        margin: 15px 0 15px 25px;
+        text-decoration: none;
+        background-color: var(--branco-principal);
+        border: 1px solid var(--azul-principal);
+        height: 30px;
+        width: 180px;
+    }
+
+    .botao__pesquisa {
+        display: none;
+    }
+
+    .Pesquisa__desktop {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .barra__pesquisa--desktop {
+        display: block;
+        font-weight: 400;
+        align-items: center;
+        text-align: left;
+        padding: 5px 0 5px 10px;
+        text-decoration: none;
+        background-color: var(--cinza-secundario);
+        border: 1px solid var(--cinza-secundario);
+        border-radius: 20px;
+        height: 28px;
+        width: 360px;
+    }
+
+    ::placeholder {
+        color: #A2A2A2;
+    }
+
+    .botao__pesquisa--desktop {
+        display: block;
+        margin: 5px 310px 0 0;
+        padding: 0;
+        border: none;
+        background: none;
+    }
+
     .banner {
         background-image: url(img/Banner\ Desktop.png);
         height: 352px;
         width: 100%;
+    }
+
+    .banner h1 {
+        font-size: 52px;
+        margin-top: 120px;
+    }
+
+    .banner p {
+        font-size: 22px;
+        padding: 15px 0 15px 0;
+    }
+
+    .banner div {
+        margin-left: 90px;
     }
 }
 
@@ -91,9 +195,13 @@ body {
 .lista__itens {
     display: grid;
     width: 375px;
-    gap: 0.8em;
+    gap: 8px;
     margin: 10px 21px 21px 21px;
     grid-template-columns: 44% 50%;
+}
+
+.secao__desktop {
+    display: none;
 }
 
 .row__titulo {
@@ -129,6 +237,10 @@ body {
     align-items: center;
 }
 
+.row__itens--desktop {
+    display: none;
+}
+
 .titulo__item {
     font-size: 14px;
     font-weight: 500;
@@ -143,6 +255,41 @@ body {
     text-decoration: none;
     color: var(--azul-principal);
     font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+    section {
+        display: none;
+    }
+
+    .titulo__lista {
+        margin-right: 760px;
+    }
+
+    .row__titulo {
+        margin: 64px 107px 16px 107px;
+    }
+
+    .row__itens {
+        display: none;
+    }
+
+    .row__itens--desktop {
+        display: flex;
+        margin: 0 107px;
+        gap: 16px;
+    }
+
+    .secao__desktop {
+        display: block;
+    }
+
+    .lista__itens {
+        margin: 8px 107px;
+        grid-template-columns: 16% 16% 16% 16% 16% 16%;
+        gap: calc(131px + 1px);
+        white-space: nowrap;
+    }
 }
 
 .rodape {
@@ -215,6 +362,38 @@ textarea::placeholder {
     padding: 12px 0 0 10px;
     font-size: 16px;
     opacity: 1;
+}
+
+.rodape__desktop {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .rodape__desktop {
+        display: grid;
+        background-color: var(--cor-footer);
+        padding-top: 1em;
+        grid-template-columns: 23% 23% 54%;
+        margin-top: 60px;
+    }
+
+    .logo__rodape--desktop {
+        margin: 50px 107px;
+    }
+
+    .informacoes {
+        margin: 50px 64px;
+        gap: 24px;
+        align-items: flex-start;
+    }
+
+    .faleconosco {
+        margin: 50px 64px;
+    }
+
+    .creditos {
+        margin: 0 500px;
+    }
 }
 
 .creditos {
